@@ -1,0 +1,64 @@
+.intro {
+  background-color: rgb(241, 241, 241);
+  text-align: center;
+
+  .imgContainer {
+    padding-top: 47px;
+
+    .img {
+      border-radius: 50%;
+      box-shadow: 10px 10px 105px rgb(8, 133, 172);
+      width: 25%;
+    }
+
+    .idendite {
+      font-size: 35px;
+      margin-top: 67px;
+      font-weight: 700;
+    }
+  }
+
+  .introh1 {
+    margin-top: 102px;
+    font-size: 40px;
+
+    span {
+      color: red;
+    }
+  }
+  .introp {
+    margin-top: 25px;
+    font-size: 20px;
+    animation: texte 2s infinite;
+  }
+  .fleche {
+    margin-top: 82px;
+    width: 43px;
+    height: 43px;
+    font-weight: 500;
+    animation: arrowBlink 2s infinite;
+
+    .spanIntro {
+      font-size: inherit;
+      color: crimson;
+    }
+  }
+
+  @keyframes arrowBlink {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes texte {
+    30% {
+      margin-top: 15px;
+    }
+    60% {
+      margin-left: 15px;
+    }
+    80% {
+      margin-right: 15px;
+    }
+  }
+}

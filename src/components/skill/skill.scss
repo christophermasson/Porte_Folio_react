@@ -1,0 +1,90 @@
+.skill {
+  text-align: center;
+  background: radial-gradient(
+    circle at 80%,
+    rgb(255, 255, 255),
+    rgb(58, 58, 58) 10%,
+    rgb(36, 36, 36) 75%,
+    rgb(240, 240, 240) 75%
+  );
+  overflow: hidden;
+}
+
+.skillcontent {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skillcontent:first-of-type {
+  animation: showup 5s infinite;
+}
+
+.skillcontent:last-of-type {
+  width: 0px;
+  animation: reveal 5s infinite;
+}
+
+.skillcontent:last-of-type span {
+  margin-left: -355px;
+  animation: slidein 5s infinite;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes slidein {
+  0% {
+    margin-left: -800px;
+  }
+  20% {
+    margin-left: -800px;
+  }
+  35% {
+    margin-left: 0px;
+  }
+  100% {
+    margin-left: 0px;
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px;
+  }
+  20% {
+    opacity: 1;
+    width: 0px;
+  }
+  30% {
+    width: 355px;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 355px;
+  }
+}
+
+.skillcontent {
+  font-size: 17px;
+  display: flex;
+  padding: 75px;
+  margin-left: 280px;
+  color: #fff;
+}

@@ -1,0 +1,28 @@
+.app {
+  height: 100vh;
+
+  .sections {
+    width: 100%;
+    // 100% de l'écran moins la Topbar de 70px
+    height: calc(100vh - 70px);
+    background-color: darkgrey;
+    position: relative;
+    top: 70px;
+    // donne une impression de fluidité pour le scroll
+    scroll-behavior: smooth;
+    // défilement automatique
+    scroll-snap-type: y mandatory;
+    // Enlever la barre navigation ( méthode pour firefox)
+    scrollbar-width: none;
+    // Enlever la barre navigation ( méthode safari, chrome)
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+}
